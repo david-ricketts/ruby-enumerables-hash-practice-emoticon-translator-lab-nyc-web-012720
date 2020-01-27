@@ -3,7 +3,7 @@
 require "yaml"
 
 
-def load_library
+def load_library(file_path)
   emoticons =YAML.load(file_path)
   
   new_hash = {
@@ -19,8 +19,10 @@ def load_library
   new_hash
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(file_path, emoticon)
   # code goes here
+  result = load_library(file_path)['get_emoticon'][emoticon]
+  
   
   
 end
