@@ -22,7 +22,7 @@ end
 def get_japanese_emoticon(file_path, emoticon)
   # code goes here
   result = load_library(file_path)['get_emoticon'][emoticon]
-  
+  result ? result : "Sorry, that emoticon"
   
   
 end
